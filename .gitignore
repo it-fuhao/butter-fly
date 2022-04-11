@@ -1,21 +1,18 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/npm-debug.log*
-/yarn-error.log
-/yarn.lock
-/package-lock.json
-
-# production
-/dist
-/docs-dist
-
-# misc
+*.log*
+.cache
 .DS_Store
+.idea
+.vscode
 
-# umi
-.umi
-.umi-production
-.umi-test
-.env.local
+# npm
+node_modules
+package-lock.json
+
+# test
+**/test/coverage
+
+# dist file
+dist
+vetur
+**/site-dist
+changelog.generated.md
