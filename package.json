@@ -11,6 +11,7 @@
     "vue": "^3.2.25",
     "vue-router": "^4.0.14"
   },
+  "homepage": "https://github.com/it-fuhao/butter-fly#readme",
   "devDependencies": {
     "@types/node": "^17.0.23",
     "@vitejs/plugin-vue": "^2.3.0",
