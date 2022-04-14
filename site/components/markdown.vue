@@ -1,25 +1,25 @@
 <template>
   <div class="markdown">
-    <mavon-editor
-      class="md"
-      v-model="webDataString"
-      :subfield="false"
-      :defaultOpen="'preview'"
-      :toolbarsFlag="false"
-      :editable="false"
-      :scrollStyle="true"
-      :ishljs="true"
-    />
+    <Aaa />
   </div>
 </template>
 <script lang='ts' setup>
-import { ref, onMounted } from 'vue';
+import { ref, nextTick } from 'vue';
+import Aaa from './aaa.md';
+import Prism from 'prismjs';
+import '../assets/style/prism.css';
 
-let webDataString = ref("123");
+
+Prism.highlightAll();
+
+
 
 </script>
 <style lang="scss" scoped>
 .markdown {
   padding-right: 440px;
+  padding-bottom: 100px;
+  min-width: 1000px;
+  overflow-x: auto;
 }
 </style>

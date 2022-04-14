@@ -63,7 +63,7 @@ const handleSideClick = (route: IRoute) => {
 .main {
   flex: 1;
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
   padding: 12px;
   padding-right: 0;
 }

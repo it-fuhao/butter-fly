@@ -31,7 +31,7 @@ const handleSideClick = (route: IRoute) => {
 </script>
 <style lang='scss' scoped>
 .side {
-  width: 200px;
+  width: 260px;
   height: 100%;
   padding: 20px 0;
   overflow-y: auto;
