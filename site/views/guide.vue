@@ -15,7 +15,7 @@
         <Markdown></Markdown>
       </div>
       <!-- ui -->
-      <UiPreview v-show="currentRoute.name" :uiPath="uiPath" :uiTitle="currentRoute.title"></UiPreview>
+      <UiPreview v-if="currentRoute.name" :uiPath="uiPath" :uiTitle="currentRoute.title"></UiPreview>
     </div>
   </div>
 </template>
