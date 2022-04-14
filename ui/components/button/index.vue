@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  button
 </template>
 
 <script setup lang="ts">
-  
 </script>
 
 <style>

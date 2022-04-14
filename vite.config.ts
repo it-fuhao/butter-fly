@@ -8,6 +8,7 @@ export default ({ mode }) => {
     resolve: {
       alias: [
         { find: "@site", replacement: "/site" },
+        { find: "@ui", replacement: "/ui" },
         { find: "@route", replacement: "/route" },
       ],
     },

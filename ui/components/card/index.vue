@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <router-view />
-  </div>
+  card
 </template>
 
 <script setup lang="ts">
-  
 </script>
 
 <style>
