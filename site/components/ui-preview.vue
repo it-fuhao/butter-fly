@@ -49,6 +49,7 @@ const size = ref<number>(96);
   flex-direction: column;
   border-radius: 32px;
   overflow: hidden;
+  background: #fff;
   box-shadow: 0 0 0 14px #090a0d, 0 0 0 16px #9fa3a8, 0 4px 20px 16px rgb(0 0 0 / 10%);
 }
 .mobile_top {
