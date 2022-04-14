@@ -1,9 +1,22 @@
 <template>
   <div class="markdown">
-    <p v-for="n in 100">123</p>
+    <mavon-editor
+      class="md"
+      v-model="webDataString"
+      :subfield="false"
+      :defaultOpen="'preview'"
+      :toolbarsFlag="false"
+      :editable="false"
+      :scrollStyle="true"
+      :ishljs="true"
+    />
   </div>
 </template>
 <script lang='ts' setup>
+import { ref, onMounted } from 'vue';
+
+let webDataString = ref("123");
+
 </script>
 <style lang="scss" scoped>
 .markdown {
