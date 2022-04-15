@@ -1,5 +1,5 @@
 {
-  "name": "@butter-fly/{{ componentName }}",
+  "name": "@butter-fly/button",
   "version": "1.0.0",
   "description": "",
   "author": "",
@@ -13,6 +13,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "node ../../command/build.js package={{ componentName }}"
+    "build": "node ../../command/build.js package=button"
   }
 }
