@@ -16,7 +16,7 @@
       </div>
       <!-- ui -->
       <UiPreview 
-        v-if="currentRoute.name" 
+        v-if="currentRoute.showMobile" 
         :uiPath="uiPath" 
         :uiTitle="currentRoute.title"
       ></UiPreview>
@@ -48,6 +48,7 @@ const handleSideClick = (route: IRoute) => {
   currentRoute.path = route.path;
   currentRoute.name = route.name;
   currentRoute.title = route.title;
+  currentRoute.showMobile = route.showMobile;
 }
 
 </script>

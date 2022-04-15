@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import { views } from '../../butterfly.config';
+import { components } from '../../butterfly.config';
+
+const routes = [...components];
 
 
 const router = createRouter({
@@ -9,7 +11,7 @@ const router = createRouter({
 });
 
 // 根据配置动态添加路由
-views.map(com => {
+routes.map(com => {
   router.addRoute({
     path: com.path,
     name: com.name,
