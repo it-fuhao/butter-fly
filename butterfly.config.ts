@@ -11,7 +11,7 @@ export interface ISide {
 }
 
 // 配置组件
-export const components: IRoute[] = [
+export const views: IRoute[] = [
   {
     path: "/button",
     name: "button",
@@ -31,7 +31,7 @@ export const side: ISide[] = [
   },
   {
     sideName: '组件',
-    sideItems: components,
+    sideItems: views,
   },
   {
     sideName: 'Utils',

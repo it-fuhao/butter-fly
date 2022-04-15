@@ -4,9 +4,9 @@
       <p class="left">{{ uiTitle }}</p>
       <p class="right">{{ realTime }}</p>
     </div>
-    <iframe :src="uiPath" frameborder="0" width="315" height="550"></iframe>
+    <iframe ref="iframe" :src="uiPath" frameborder="0" width="315" height="550"></iframe>
     <div class="mobile_bottom">
-      <div class="icons left" title="刷新页面"></div>
+      <div class="icons left" title="刷新页面" @click="refreshIframe"></div>
       <div class="icons center" title="扫码预览">
         <QrcodeVue :value="uiPath" :size="size" level="H" class="qrcode_preview"></QrcodeVue>
       </div>
@@ -18,14 +18,8 @@
 import { ref } from 'vue';
 import QrcodeVue from 'qrcode.vue';
 import dayjs from 'dayjs';
-const props = defineProps({
-  uiPath: {
-    type: String,
-  },
-  uiTitle: {
-    type: String,
-  },
-})
+
+const props = defineProps(['uiPath', 'uiTitle']);
 
 // 实时时间
 let realTime = ref<string>('');
@@ -35,6 +29,12 @@ setInterval(() => {
 
 // 二维码图片大小
 const size = ref<number>(96);
+
+// 刷新iframe
+const iframe = ref<HTMLIFrameElement>();
+const refreshIframe = () => {
+  iframe.value?.contentWindow?.location.reload();
+}
 
 </script>
 <style lang="scss" scoped>

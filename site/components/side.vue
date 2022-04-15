@@ -16,14 +16,9 @@
 </template>
 <script lang='ts' setup>
 import { IRoute } from '../../butterfly.config';
-const props = defineProps({
-  sideList: {
-    type: Array,
-  },
-  currentRoute: {
-    type: Object,
-  },
-})
+const props = defineProps(['sideList', 'currentRoute']);
+
+// 切换sideItem
 const emit = defineEmits(['handleSideClick']);
 const handleSideClick = (route: IRoute) => {
   emit('handleSideClick', route);

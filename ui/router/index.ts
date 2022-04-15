@@ -1,19 +1,19 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-import { components } from '../../butterfly.config';
+import { views } from '../../butterfly.config';
 
 
 const router = createRouter({
-  history: createWebHashHistory('/butter-fly/'),
+  history: createWebHashHistory(),
   routes: [],
 });
 
 // 根据配置动态添加路由
-components.map(com => {
+views.map(com => {
   router.addRoute({
     path: com.path,
     name: com.name,
-    component: () => import(`../components/${com.name}/index.vue`),
+    component: () => import(`../views/${com.name}/index.vue`),
   })
 })
 

@@ -12,10 +12,14 @@
       <!-- main -->
       <div class="main">
         <!-- content -->
-        <Markdown></Markdown>
+        <Markdown :uiName="currentRoute.name"></Markdown>
       </div>
       <!-- ui -->
-      <UiPreview v-if="currentRoute.name" :uiPath="uiPath" :uiTitle="currentRoute.title"></UiPreview>
+      <UiPreview 
+        v-if="currentRoute.name" 
+        :uiPath="uiPath" 
+        :uiTitle="currentRoute.title"
+      ></UiPreview>
     </div>
   </div>
 </template>
@@ -35,7 +39,7 @@ let uiPath = computed<string>(() => {
   return `${baseUrl}/ui/index.html#/${currentRoute.name}`;
 })
 // 获取左侧菜单栏
-const sideList: ISide[] = reactive(side);
+const sideList = reactive<ISide[]>(side);
 // 定义当前路由
 let currentRoute = reactive({} as IRoute);
 
