@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client"],
+    "types": ["vite/client", "node"],
     "paths":{
       "@site": ["./site/*"],
       "@ui": ["./ui/*"],
@@ -28,9 +28,13 @@
     "packages/**/*.tsx", 
     "packages/**/*.vue", 
     "ui/**/*.vue", 
-    "ui/**/*.ts", 
-    "route/**/*.ts", 
+    "ui/**/*.ts",
     "env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__tests__",
+    "dist/**"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

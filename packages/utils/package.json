@@ -1,0 +1,26 @@
+{
+  "name": "@lerna1/utils",
+  "version": "1.0.13",
+  "description": "> TODO: description",
+  "author": "fuhao1px <fuhao1px@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "node ../../command/build.js package=utils"
+  },
+  "gitHead": "992c3bd45007fccd523031334fe768cec1aa5f1d"
+}

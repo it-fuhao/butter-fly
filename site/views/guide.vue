@@ -10,7 +10,7 @@
         @handleSideClick="handleSideClick"
       ></Side>
       <!-- main -->
-      <div class="main">
+      <div ref="main" class="main">
         <!-- content -->
         <Markdown :uiName="currentRoute.name"></Markdown>
       </div>
@@ -43,12 +43,16 @@ const sideList = reactive<ISide[]>(side);
 // 定义当前路由
 let currentRoute = reactive({} as IRoute);
 
+let main = ref<HTMLDivElement>()
+
 // 切换路由
 const handleSideClick = (route: IRoute) => {
   currentRoute.path = route.path;
   currentRoute.name = route.name;
   currentRoute.title = route.title;
   currentRoute.showMobile = route.showMobile;
+  main.value!.scrollTop = 0;
+  main.value!.scrollLeft = 0;
 }
 
 </script>

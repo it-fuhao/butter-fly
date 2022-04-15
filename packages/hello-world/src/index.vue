@@ -6,7 +6,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
-  name: "button",
+  name: "HelloWorld",
   setup() {
     const msg = ref(10064);
     return {

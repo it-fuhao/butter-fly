@@ -1,0 +1,21 @@
+{
+  "name": "@lerna1/hello-world",
+  "version": "1.0.9",
+  "description": "",
+  "author": "",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "node ../../command/build.js package=hello-world"
+  },
+  "dependencies": {
+    "@lerna1/utils": "1.0.13"
+  }
+}

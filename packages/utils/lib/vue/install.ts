@@ -1,7 +1,3 @@
-// import { withInstall } from '@lerna1/utils'
-// import { withInstall } from '../utils/lib/index'
-
-
 import type { AppContext, Plugin } from 'vue'
 
 export type SFCWithInstall<T> = T & Plugin
@@ -29,12 +25,6 @@ export const withInstall = <T, E extends Record<string, any>>(
   return main as SFCWithInstall<T> & E
 }
 
-
-
-
-import HelloWorld from './src/index.vue'
-
-export const FhHelloWorld = withInstall(HelloWorld)
-export default FhHelloWorld
-
-export * from './src/index'
+export const a = 1;
+export const b = 2;
+export const c = 3;
