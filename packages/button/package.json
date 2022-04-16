@@ -15,5 +15,8 @@
   "scripts": {
     "build": "node ../../command/build.js package=button"
   },
+  "dependencies": {
+    "@butter-fly/utils": "1.0.2"
+  },
   "gitHead": "db5df6c3d369e7066fcd4dc73ea6b3ea20d29b9e"
 }

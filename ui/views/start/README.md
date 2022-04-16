@@ -2,11 +2,30 @@
 
 
 ## start 
-> yarn install
+> lerna bootstrap
 
 ## 开发
-> npm run create
-创建组件工作区
+> npm run create 创建组件工作区
+
+> lerna add [@version] [--dev] [--exact]
+- 增加本地或者远程package做为当前项目packages里面的依赖
+```js
+# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
+lerna add module-1 packages/prefix-*
+
+# Install module-1 to module-2
+lerna add module-1 --scope=module-2
+
+# Install module-1 to module-2 in devDependencies
+lerna add module-1 --scope=module-2 --dev
+
+# Install module-1 in all modules except module-1
+lerna add module-1
+
+# Install babel-core in all modules
+lerna add babel-core
+```
+
 
 - lerna 
 lerna : 无法加载文件，系统策略禁止运行脚本
