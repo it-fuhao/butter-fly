@@ -1,6 +1,6 @@
 {
   "name": "@butter-fly/button",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "author": "",
   "homepage": "",
@@ -16,7 +16,7 @@
     "build": "node ../../command/build.js package=button"
   },
   "dependencies": {
-    "@butter-fly/utils": "1.0.2"
+    "@butter-fly/utils": "1.0.3"
   },
   "gitHead": "db5df6c3d369e7066fcd4dc73ea6b3ea20d29b9e"
 }
