@@ -10,7 +10,8 @@
     "build": "vite build",
     "preview": "vite preview --host",
     "create": "node ./command/create.js",
-    "build:packages": "lerna run build"
+    "build:packages": "lerna run build",
+    "publish": "lerna publish"
   },
   "dependencies": {
     "dayjs": "^1.11.0",

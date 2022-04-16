@@ -1,6 +1,6 @@
 {
-  "name": "@lerna1/hello-world",
-  "version": "1.0.9",
+  "name": "@button-fly/hello-world",
+  "version": "1.0.0",
   "description": "",
   "author": "",
   "homepage": "",
@@ -16,6 +16,6 @@
     "build": "node ../../command/build.js package=hello-world"
   },
   "dependencies": {
-    "@lerna1/utils": "1.0.13"
+    "@button-fly/utils": "1.0.0"
   }
 }
