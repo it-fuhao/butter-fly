@@ -22,5 +22,5 @@
   "scripts": {
     "build": "node ../../command/build.js package=utils"
   },
-  "gitHead": "db5df6c3d369e7066fcd4dc73ea6b3ea20d29b9e"
+  "gitHead": "b9554eb82d7e44ccc0d58e947512db3aacb0c9e4"
 }
