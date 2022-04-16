@@ -5,4 +5,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.1 (2022-04-16)
 
-**Note:** Version bump only for package @button-fly/hello-world
+**Note:** Version bump only for package @butter-fly/button
