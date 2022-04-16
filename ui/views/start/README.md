@@ -32,6 +32,11 @@ lerna : 无法加载文件，系统策略禁止运行脚本
 使用管理员身份运行powershell  > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2
 
+>运行lerna publish如果中途有包发布失败，再运行lerna publish的时候，因为Tag已经打上去了，所以不会再重新发布包到NPM
+解决办法：
+1. 运行lerna publish from-git，会把当前标签中涉及的NPM包再发布一次，PS：不会再更新package.json，只是执行npm publish
+2. 运行lerna publish from-package，会把当前所有本地包中的package.json和远端NPM比对，如果是NPM上不存在的包版本，都执行一次npm publish
+
 ## 构建相关
 - 项目根目录执行`build:all`命令，需要触发packages中的业务包自己执行build √
 - 业务包自行build出dist产物，publish发布此lib √

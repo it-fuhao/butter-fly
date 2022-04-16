@@ -24,7 +24,3 @@ export const withInstall = <T, E extends Record<string, any>>(
   }
   return main as SFCWithInstall<T> & E
 }
-
-export const a = 1;
-export const b = 2;
-export const c = 3;
