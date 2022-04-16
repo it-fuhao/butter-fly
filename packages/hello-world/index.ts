@@ -1,4 +1,4 @@
-import { withInstall } from '@butter-fly/utils'
+import { withInstall } from '@butter-fly/utils';
 // import { withInstall } from '../utils/lib/index'
 
 import HelloWorld from './src/index.vue'
