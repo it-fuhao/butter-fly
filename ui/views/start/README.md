@@ -48,6 +48,7 @@ https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/abo
 1. 构建时排除组件依赖？
 2. 组件库发版后，业务端项目yarn install也无法获取到最新的包，需要yarn upgrade更新
 3. 发布前需要判断是否有dist文件夹
+4. 创建组件工作区时，组件的utils依赖包如何引入？ lerna add ？ template模板写入？
 
 
 ## 发布相关

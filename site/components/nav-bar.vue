@@ -3,7 +3,7 @@
     <!-- 左侧 -->
     <div class="left" @click="handleReturnIndex">
       <img class="logo" src="@site/assets/images/logo.svg" alt="">
-      <h4 class="main_title">Butterfly</h4>
+      <h4 class="main_title">ButterFly</h4>
     </div>
     <!-- 右侧 -->
     <div class="right">

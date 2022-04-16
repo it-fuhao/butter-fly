@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview --host",
+    "build:site": "vite build",
+    "preview:site": "vite preview --host",
     "create": "node ./command/create.js",
     "build:packages": "lerna run build",
     "publish": "lerna publish"

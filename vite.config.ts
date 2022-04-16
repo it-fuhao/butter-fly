@@ -2,7 +2,8 @@ import { resolve } from "path";
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Markdown from 'vite-plugin-md';
-import prismjs from 'vite-plugin-prismjs';
+import { prismjsPlugin } from 'vite-plugin-prismjs';
+console.log(prismjsPlugin);
 
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
@@ -13,7 +14,7 @@ export default ({ mode }) => {
         include: [/\.vue$/, /\.md$/],
       }),
       Markdown(),
-      prismjs({
+      prismjsPlugin({
         languages: ['json', 'js'],
         //  languages: 'all',
       }),
@@ -22,7 +23,7 @@ export default ({ mode }) => {
       alias: [
         { find: "@site", replacement: "/site" },
         { find: "@ui", replacement: "/ui" },
-        { find: "@route", replacement: "/route" },
+        { find: "@packages", replacement: "/packages" },
       ],
     },
     build: {
