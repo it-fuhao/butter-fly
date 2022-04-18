@@ -1,16 +1,16 @@
-import fs from "fs-extra";
-import chalk from "chalk";
-import symbols from "log-symbols";
-import inquirer from "inquirer";
-import { componentNameValidateFn } from "./validate.js";
-import { templatePath, componentTargetPath } from "./path.js";
+import fs from 'fs-extra';
+import chalk from 'chalk';
+import symbols from 'log-symbols';
+import inquirer from 'inquirer';
+import { componentNameValidateFn } from './validate.js';
+import { templatePath, componentTargetPath } from './path.js';
 
 // 输入内容
 const promptList = [
   {
-    type: "input",
-    message: "请输入组件名称（小写，以-分隔）:",
-    name: "componentName",
+    type: 'input',
+    message: '请输入组件名称（小写，以-分隔）:',
+    name: 'componentName',
     validate: componentNameValidateFn, // 校验函数
   }
 ]
@@ -18,7 +18,7 @@ const promptList = [
 const answer = await inquirer.prompt(promptList);
 console.log(answer);
 
-// console.log(symbols.success, chalk.green("开始创建..........,请稍候"));
+// console.log(symbols.success, chalk.green('开始创建..........,请稍候'));
 
 /**
  * 创建组件工作区
@@ -28,18 +28,18 @@ console.log(answer);
  * @returns 
  */
 const createComponent = async (templatePath, targetpath, name) => {
-  console.log(chalk.green("开始创建，请稍候..."));
+  console.log(chalk.green('开始创建，请稍候...'));
   const targetComponentDir = `${targetpath}/${name}`;
   // 拷贝模板
   try {
     await fs.copy(templatePath, targetComponentDir);
   } catch (error) {
-    console.log(symbols.error, chalk.red("拷贝文件失败", error));
+    console.log(symbols.error, chalk.red('拷贝文件失败', error));
     return;
   }
   // 改些模板，生成组件工作区文件
   await reWriteFile(targetComponentDir, name); // 生成文件
-  console.log(symbols.success, chalk.green("组件工作区创建完毕！"));
+  console.log(symbols.success, chalk.green('组件工作区创建完毕！'));
 }
 
 /**
@@ -54,8 +54,8 @@ const reWriteFile = async (path, name) => {
     if (fs.statSync(fileName).isFile()) {
       // 修改文件名后缀
       let newFileName = fileName;
-      if (fileName.endsWith(".tpl")) {
-        newFileName = fileName.replace(/.tpl/g, "");
+      if (fileName.endsWith('.tpl')) {
+        newFileName = fileName.replace(/.tpl/g, '');
         await fs.rename(fileName, newFileName);
       }
       console.log(`${newFileName} 创建成功`);
@@ -79,7 +79,7 @@ const renderFileWithPrompt = (filePath) => {
   promptList.forEach(prompt => {
     const { name } = prompt;
     const val = answer[name];
-    const reg = new RegExp(`{{ ${name} }}`, "g");
+    const reg = new RegExp(`{{ ${name} }}`, 'g');
     content = content.replace(reg, val);
   })
   return content;
