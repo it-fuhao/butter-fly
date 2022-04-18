@@ -1,1 +1,1 @@
-export * from './vue'
+export * from './validate'; // 校验类

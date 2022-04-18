@@ -25,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
-import NavBar from '../components/nav-bar.vue';
-import Side from '../components/side.vue';
-import Markdown from '../components/markdown.vue';
-import UiPreview from '../components/ui-preview.vue';
+import NavBar from '@/site/components/nav-bar.vue';
+import Side from '@/site/components/side.vue';
+import Markdown from '@/site/components/markdown.vue';
+import UiPreview from '@/site/components/ui-preview.vue';
 import { ref, reactive, computed } from 'vue';
 import { useRoute } from "vue-router";
 import { side, ISide, IRoute } from '../../butterfly.config';

@@ -13,9 +13,9 @@
     "lib": ["esnext", "dom"],
     "types": ["vite/client", "node"],
     "paths":{
-      "@site": ["./site/*"],
-      "@ui": ["./ui/*"],
-      "@route": ["./route/*"],
+      "@/site": ["./site/*"],
+      "@/ui": ["./ui/*"],
+      "@/packages": ["./packages/*"],
     }
   },
   "include": [

@@ -1,21 +1,23 @@
-import fs from 'fs-extra';
-import path from 'path';
-import chalk from 'chalk';
-import symbols from 'log-symbols';
-import { defineConfig, build } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
-import dts from 'vite-plugin-dts';
 
-const outputDir = 'dist'; // 构建产物文件夹名称
+
+import fs from "fs-extra";
+import path from "path";
+import chalk from "chalk";
+import symbols from "log-symbols";
+import { defineConfig, build } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import dts from "vite-plugin-dts";
+
+const outputDir = "dist"; // 构建产物文件夹名称
 
 // 打包的入口文件
-const packageName = process.argv[2].split('=')[1];
-const entryDir = path.resolve('./');
+const packageName = process.argv[2].split("=")[1];
+const entryDir = path.resolve("./");
 console.log(entryDir);
 // 出口文件夹
 const outDir = path.resolve(`./${outputDir}`);
-console.log('outDir', outDir);
+console.log("outDir", outDir);
 // vite基础配置
 const baseConfig = defineConfig({
   configFile: false,
@@ -62,6 +64,28 @@ const buildAll = async () => {
 }
 
 /**
+ * 打包后的组件生成自己的package.json
+ * @param {String} entryDir 打包入口文件
+ * @param {String} outDir 打包出口文件
+ */
+const createPackageJson = async (entryDir, outDir) => {
+  // 定义工作区描述文件路径
+  const packageEntryDir = path.resolve(entryDir, 'package.json');
+  // 定义输出package.json的路径
+  const packageJsonOutDir = path.resolve(outDir, 'package.json');
+  // 将组件工作区的描述文件，copy到dist目录下
+  await fs.copy(packageEntryDir, packageJsonOutDir);
+  // 修改dist下描述文件信息，
+  let packageJson = await fs.readJson(packageJsonOutDir);
+  packageJson.main = 'index.umd.js';
+  packageJson.module = 'index.es.js';
+  packageJson.types = 'index.d.ts';
+  // 写入文件保留格式化，方便阅读
+  const content = JSON.stringify(packageJson, null, '\t');
+  await fs.writeFile(packageJsonOutDir, content);
+}
+
+/**
  * 删除文件夹
  * @param {*} dir 需要删除的文件夹 
  * @returns 
@@ -94,6 +118,8 @@ const buildComponent = async () => {
   await removeDir(outDir);
   // 开始构建
   await buildAll();
+  // 创建依赖包package.json
+  await createPackageJson(entryDir, outDir);
   console.log(symbols.success, chalk.green(`${packageName}构建成功！`));
 }
 

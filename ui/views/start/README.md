@@ -2,28 +2,27 @@
 
 
 ## start 
-> lerna bootstrap
+安装依赖
+```json
+yarn install -W
+```
+本地启动站点
+```json
+yarn dev
+```
+预览站点
+```json
+yarn preview:site
+```
 
 ## 开发
-> npm run create 创建组件工作区
-
-> lerna add [@version] [--dev] [--exact]
-- 增加本地或者远程package做为当前项目packages里面的依赖
-```js
-# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
-lerna add module-1 packages/prefix-*
-
-# Install module-1 to module-2
-lerna add module-1 --scope=module-2
-
-# Install module-1 to module-2 in devDependencies
-lerna add module-1 --scope=module-2 --dev
-
-# Install module-1 in all modules except module-1
-lerna add module-1
-
-# Install babel-core in all modules
-lerna add babel-core
+创建组件工作区
+```json
+yarn create
+```
+增加本地或者远程package做为当前项目packages里面的依赖
+```json
+lerna add module-1 --scope=module-2 // 将module-1作为module2的依赖
 ```
 
 
@@ -57,6 +56,7 @@ https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/abo
 开发者可能使用了淘宝镜像源，无法登录npm
 1. 使用 > npm login --registry https://registry.npmjs.org
 2. 切换淘宝镜像为npm官方 npm config set registry https://registry.npmjs.org
+3. 切换回淘宝镜像 npm config set registry https://registry.npm.taobao.org
 
 - lerna publish √
 检测改动过的包，依次发布

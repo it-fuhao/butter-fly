@@ -6,6 +6,7 @@ import { prismjsPlugin } from 'vite-plugin-prismjs';
 import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 export default ({ mode }) => {
+  console.log(resolve(__dirname, './packages'));
   const env = loadEnv(mode, process.cwd());
   return defineConfig({
     // base: env.VITE_APP_MODE === "dev" ? "" : "/",
@@ -26,9 +27,9 @@ export default ({ mode }) => {
     ],
     resolve: {
       alias: [
-        { find: "@site", replacement: "/site" },
-        { find: "@ui", replacement: "/ui" },
-        { find: "@packages", replacement: "/packages" },
+        { find: "@/site", replacement: "/site" },
+        { find: "@/ui", replacement: "/ui" },
+        { find: "@/packages", replacement: '/packages' },
       ],
     },
     build: {

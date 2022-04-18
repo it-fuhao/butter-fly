@@ -179,5 +179,5 @@ a:hover {
 }
 
 .icons {
-  background: url("@site/assets/images/icons.png") no-repeat 0 0/230px auto;
+  background: url("@/site/assets/images/icons.png") no-repeat 0 0/230px auto;
 }

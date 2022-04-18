@@ -5,9 +5,7 @@
   "author": "",
   "homepage": "",
   "license": "ISC",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
+  "main": "index.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
