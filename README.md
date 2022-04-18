@@ -3,25 +3,25 @@
 
 ## start 
 安装依赖
-```json
+```js
 yarn install -W
 ```
 本地启动站点
-```json
+```js
 yarn dev
 ```
 预览站点
-```json
+```js
 yarn preview:site
 ```
 
 ## 开发
 创建组件工作区
-```json
+```js
 yarn create
 ```
 增加本地或者远程package做为当前项目packages里面的依赖
-```json
+```js
 lerna add module-1 --scope=module-2 // 将module-1作为module2的依赖
 ```
 
