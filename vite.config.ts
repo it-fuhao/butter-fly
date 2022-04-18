@@ -3,7 +3,7 @@ import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Markdown from 'vite-plugin-md';
 import { prismjsPlugin } from 'vite-plugin-prismjs';
-console.log(prismjsPlugin);
+import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
@@ -15,8 +15,13 @@ export default ({ mode }) => {
       }),
       Markdown(),
       prismjsPlugin({
-        languages: ['json', 'js'],
+        languages: ['json', 'javascript'],
         //  languages: 'all',
+      }),
+      styleImport({
+        resolves: [
+          VantResolve()
+        ],
       }),
     ],
     resolve: {

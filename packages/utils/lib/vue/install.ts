@@ -24,3 +24,7 @@ export const withInstall = <T, E extends Record<string, any>>(
   }
   return main as SFCWithInstall<T> & E
 }
+
+export function createNamespace(name: string) {
+  return `bf-${name}`;
+}

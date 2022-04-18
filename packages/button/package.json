@@ -15,6 +15,10 @@
   "scripts": {
     "build": "node ../../command/build.js package=button"
   },
+  "peerDependencies": {
+    "vant": ">=3.4.0",
+    "vue": ">=3.2.0"
+  },
   "dependencies": {
     "@butter-fly/utils": "1.0.3"
   },

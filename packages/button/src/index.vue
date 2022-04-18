@@ -1,12 +1,16 @@
 <template>
   <div>
-    <button @click="handleClick">这是一个按钮</button>
+    <van-button @click="handleClick">这是一个按钮</van-button>
     <p>{{ text }}</p>
   </div>
 </template>
 <script lang='ts'>
 import { ref, defineComponent } from 'vue';
+import { Button } from 'vant';
 export default defineComponent({
+  components: {
+    [Button.name]: Button
+  },
   setup() {
     let text = ref<string>('');
     const handleClick = () => {
