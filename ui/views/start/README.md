@@ -62,7 +62,9 @@ https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/abo
 检测改动过的包，依次发布
 修改一个包，如果其他包依赖这个包，则会自动检测并发布
 
-- lerna publish --canary --yes
+- 只发布dist文件夹下的内容，package.json通过lerna prepublish钩子打包时动态创建
+
+- lerna publish --yes
 跳过“您确定要发布上述更改吗？”
 
 ## 模板策略
