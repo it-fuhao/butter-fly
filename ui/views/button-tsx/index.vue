@@ -4,6 +4,7 @@
 
 <script setup lang="ts">
 import BFButtonTsx from '@/packages/button-tsx';
+// console.log(BFButtonTsx);
 const handleClick = () => {
   console.log(123);
 }
