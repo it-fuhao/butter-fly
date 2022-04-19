@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 import Markdown from 'vite-plugin-md';
 import { prismjsPlugin } from 'vite-plugin-prismjs';
 import styleImport, { VantResolve } from 'vite-plugin-style-import';
@@ -14,6 +15,7 @@ export default ({ mode }) => {
       vue({
         include: [/\.vue$/, /\.md$/],
       }),
+      vueJsx(),
       Markdown(),
       prismjsPlugin({
         languages: ['json', 'javascript'],

@@ -8,6 +8,7 @@
 import { ref, defineComponent } from 'vue';
 import { Button } from 'vant';
 export default defineComponent({
+  name: "BFButton",
   components: {
     [Button.name]: Button
   },

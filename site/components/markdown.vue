@@ -15,7 +15,13 @@ const dynamic = reactive({
   currentMd: {},
 })
 const refreshMarkdown = async (uiName: string) => {
-  const file = await import(`../../ui/views/${uiName}/README.md`); 
+  let path: string = '';
+  if (uiName === 'start') {
+    path = `../../README.md`;
+  } else {
+    path = `../../ui/views/${uiName}/README.md`;
+  }
+  const file = await import(path); 
   dynamic.currentMd = markRaw(file.default); 
 }
 

@@ -30,6 +30,12 @@ export const components: IRoute[] = [
     showMobile: true,
   },
   {
+    path: "/button-tsx",
+    name: "button-tsx",
+    title: "按钮 button-tsx",
+    showMobile: true,
+  },
+  {
     path: "/card",
     name: "card",
     title: "卡片 card",
