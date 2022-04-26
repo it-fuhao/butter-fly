@@ -5,7 +5,7 @@
     <!-- main -->
     <div class="wrap">
       <div class="main">
-        <img class="logo" src="@/site/assets/images/logo.svg" alt="">
+        <img class="logo" src="@/site/assets/images/logo.svg" alt="" />
         <h4 class="main_title">ButterFly中文网</h4>
         <div class="btns">
           <a href="javascript:;" class="btn_premary" @click="handleStart">开始</a>
@@ -23,8 +23,7 @@ const router = useRouter();
 
 const handleStart = () => {
   router.push({ name: 'guide' });
-}
-
+};
 </script>
 
 <style lang="scss" scoped>

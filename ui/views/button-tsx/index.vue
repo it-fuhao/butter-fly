@@ -6,9 +6,8 @@
 import BFButtonTsx from '@/packages/button-tsx';
 // console.log(BFButtonTsx);
 const handleClick = () => {
-  console.log("点击了组件");
-}
+  console.log('点击了组件');
+};
 </script>
 
-<style>
-</style>
+<style></style>

@@ -16,7 +16,7 @@ const router = createRouter({
       path: '/guide',
       name: 'guide',
       component: () => import('@/site/views/guide.vue'),
-    }
+    },
   ],
 });
 

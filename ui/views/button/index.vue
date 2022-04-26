@@ -10,5 +10,4 @@ import BFButton from '@/packages/button';
 // import { withInstall } from '@butter-fly/utils'
 </script>
 
-<style>
-</style>
+<style></style>

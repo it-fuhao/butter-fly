@@ -2,7 +2,7 @@
   <div class="nav_bar">
     <!-- 左侧 -->
     <div class="left" @click="handleReturnIndex">
-      <img class="logo" src="@/site/assets/images/logo.svg" alt="">
+      <img class="logo" src="@/site/assets/images/logo.svg" alt="" />
       <h4 class="main_title">ButterFly</h4>
     </div>
     <!-- 右侧 -->
@@ -11,12 +11,12 @@
     </div>
   </div>
 </template>
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { useRouter } from 'vue-router';
 const router = useRouter();
 const handleReturnIndex = () => {
   router.push({ name: 'index' });
-}
+};
 </script>
 <style lang="scss" scoped>
 .nav_bar {

@@ -3,7 +3,7 @@
     <component :is="dynamic.currentMd" />
   </div>
 </template>
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { reactive, watch, markRaw, nextTick } from 'vue';
 import Prism from 'prismjs';
 import '../assets/style/prism.css';
@@ -13,7 +13,7 @@ const props = defineProps(['uiName']);
 // 动态引入markdown
 const dynamic = reactive({
   currentMd: {},
-})
+});
 const refreshMarkdown = async (uiName: string) => {
   let file: any;
   if (uiName === 'start') {
@@ -21,22 +21,22 @@ const refreshMarkdown = async (uiName: string) => {
   } else {
     file = await import(`../../ui/views/${uiName}/README.md`);
   }
-  dynamic.currentMd = markRaw(file.default); 
-}
+  dynamic.currentMd = markRaw(file.default);
+};
 
 // 监听side切换
 watch(
-  () => props.uiName, 
-  async newValue => {
+  () => props.uiName,
+  async (newValue) => {
     if (newValue) {
       // 刷新md文档
-      await refreshMarkdown(newValue); 
+      await refreshMarkdown(newValue);
       // 添加代码块高亮
       await nextTick();
       Prism.highlightAll();
     }
-});
-
+  },
+);
 </script>
 
 <style lang="scss" scoped>

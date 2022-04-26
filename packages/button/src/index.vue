@@ -4,26 +4,25 @@
     <p>{{ text }}</p>
   </div>
 </template>
-<script lang='ts'>
+<script lang="ts">
 import { ref, defineComponent } from 'vue';
 import { Button } from 'vant';
 export default defineComponent({
-  name: "BFButton",
+  name: 'BFButton',
   components: {
-    [Button.name]: Button
+    [Button.name]: Button,
   },
   setup() {
     let text = ref<string>('');
     const handleClick = () => {
       text.value = '你点击了按钮';
-    }
+    };
 
     return {
       text,
-      handleClick
-    }
-  }
-})
+      handleClick,
+    };
+  },
+});
 </script>
-<style lang='scss' scoped>
-</style>
+<style lang="scss" scoped></style>

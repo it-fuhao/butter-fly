@@ -1,4 +1,3 @@
-
 export interface IRoute {
   path: string;
   name: string;
@@ -14,34 +13,34 @@ export interface ISide {
 // 配置指引
 export const guide: IRoute[] = [
   {
-    path: "/start",
-    name: "start",
-    title: "开始",
+    path: '/start',
+    name: 'start',
+    title: '开始',
     showMobile: false,
   },
-]
+];
 
 // 配置组件
 export const components: IRoute[] = [
   {
-    path: "/button",
-    name: "button",
-    title: "按钮 button",
+    path: '/button',
+    name: 'button',
+    title: '按钮 button',
     showMobile: true,
   },
   {
-    path: "/button-tsx",
-    name: "button-tsx",
-    title: "按钮 button-tsx",
+    path: '/button-tsx',
+    name: 'button-tsx',
+    title: '按钮 button-tsx',
     showMobile: true,
   },
   {
-    path: "/card",
-    name: "card",
-    title: "卡片 card",
+    path: '/card',
+    name: 'card',
+    title: '卡片 card',
     showMobile: true,
   },
-]
+];
 
 // 配置side
 export const side: ISide[] = [
@@ -56,4 +55,4 @@ export const side: ISide[] = [
   {
     sideName: 'Utils',
   },
-]
+];

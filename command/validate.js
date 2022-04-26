@@ -3,7 +3,7 @@ import { componentTargetPath } from './path.js';
 
 /**
  * 创建组件名校验函数
- * @param {String} val 组件名 
+ * @param {String} val 组件名
  */
 export const componentNameValidateFn = (val) => {
   const files = fs.readdirSync(componentTargetPath);
@@ -14,4 +14,4 @@ export const componentNameValidateFn = (val) => {
     return '组件名已存在，请重新输入';
   }
   return true;
-}
+};

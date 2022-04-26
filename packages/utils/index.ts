@@ -1,2 +1,2 @@
-export * from './lib'
-export * from './vue'
+export * from './lib';
+export * from './vue';

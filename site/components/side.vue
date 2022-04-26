@@ -3,18 +3,20 @@
     <div v-for="(side, index) in sideList" :key="index" class="side_item">
       <h5 class="side_title">{{ side.sideName }}</h5>
       <div class="route_list">
-        <p 
-          v-for="(route, i) in side.sideItems" 
-          :key="i" 
+        <p
+          v-for="(route, i) in side.sideItems"
+          :key="i"
           :title="route.title"
-          :class="{'active': currentRoute.name === route.name}"
+          :class="{ active: currentRoute.name === route.name }"
           @click="handleSideClick(route)"
-        >{{ route.title }}</p>
+        >
+          {{ route.title }}
+        </p>
       </div>
     </div>
   </div>
 </template>
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { IRoute } from '../../butterfly.config';
 const props = defineProps(['sideList', 'currentRoute']);
 
@@ -22,9 +24,9 @@ const props = defineProps(['sideList', 'currentRoute']);
 const emit = defineEmits(['handleSideClick']);
 const handleSideClick = (route: IRoute) => {
   emit('handleSideClick', route);
-}
+};
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .side {
   width: 260px;
   height: 100%;

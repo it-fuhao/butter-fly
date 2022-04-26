@@ -14,7 +14,7 @@
     </div>
   </div>
 </template>
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { ref } from 'vue';
 import QrcodeVue from 'qrcode.vue';
 import dayjs from 'dayjs';
@@ -34,8 +34,7 @@ const size = ref<number>(96);
 const iframe = ref<HTMLIFrameElement>();
 const refreshIframe = () => {
   iframe.value?.contentWindow?.location.reload();
-}
-
+};
 </script>
 <style lang="scss" scoped>
 .ui_preview {

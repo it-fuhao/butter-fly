@@ -6,14 +6,14 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
-  name: "HelloWorld",
+  name: 'HelloWorld',
   setup() {
     const msg = ref(10064);
     return {
-      msg
-    }
-  }
-})
+      msg,
+    };
+  },
+});
 </script>
 <style lang="scss">
 p {

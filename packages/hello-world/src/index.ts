@@ -1,3 +1,3 @@
 export const propsTypes = {
-  name: String
-}
+  name: String,
+};
