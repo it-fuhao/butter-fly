@@ -6,7 +6,7 @@ import Markdown from 'vite-plugin-md';
 import { prismjsPlugin } from 'vite-plugin-prismjs';
 import styleImport, { VantResolve } from 'vite-plugin-style-import';
 
-let a = "1234";
+let a = '12345';
 
 export default ({ mode }) => {
   console.log(resolve(__dirname, './packages'));
