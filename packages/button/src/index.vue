@@ -1,17 +1,13 @@
 <template>
   <div>
-    <van-button @click="handleClick">这是一个按钮3</van-button>
+    <van-button @click="handleClick">这是一个按钮4</van-button>
     <p>{{ text }}</p>
   </div>
 </template>
 <script lang="ts">
 import { ref, defineComponent } from 'vue';
-import { Button } from 'vant';
 export default defineComponent({
   name: 'BFButton',
-  components: {
-    [Button.name]: Button,
-  },
   setup() {
     let text = ref<string>('');
     const handleClick = () => {

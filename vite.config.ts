@@ -4,7 +4,10 @@ import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import Markdown from 'vite-plugin-md';
 import { prismjsPlugin } from 'vite-plugin-prismjs';
-import styleImport, { VantResolve } from 'vite-plugin-style-import';
+import { createStyleImportPlugin, VantResolve } from 'vite-plugin-style-import';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
+import { VantResolver } from 'unplugin-vue-components/resolvers';
 
 export default ({ mode }) => {
   console.log(resolve(__dirname, './packages'));
@@ -21,8 +24,17 @@ export default ({ mode }) => {
         languages: ['json', 'javascript'],
         //  languages: 'all',
       }),
-      styleImport({
+      createStyleImportPlugin({
         resolves: [VantResolve()],
+      }),
+      AutoImport({
+        imports: ['vue', 'vue-router'],
+        dts: 'packages/auto-import.d.ts',
+      }),
+      Components({
+        dts: 'packages/components.d.ts',
+        extensions: ['vue', 'tsx'],
+        resolvers: [VantResolver()],
       }),
     ],
     resolve: {
