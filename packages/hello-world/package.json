@@ -1,6 +1,6 @@
 {
   "name": "@butter-fly/hello-world",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "author": "",
   "homepage": "",
@@ -16,7 +16,7 @@
     "build": "node ../../command/build.js package=hello-world"
   },
   "dependencies": {
-    "@butter-fly/utils": "1.0.5"
+    "@butter-fly/utils": "1.0.6"
   },
   "gitHead": "175e66e9e8ed2c9f7fd63278cb7693a770a93de0"
 }
