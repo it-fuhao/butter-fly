@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-button @click="handleClick">这是一个按钮4</van-button>
+    <van-button @click="handleClick">这是一个按钮5</van-button>
     <p>{{ text }}</p>
   </div>
 </template>
