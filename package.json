@@ -1,6 +1,7 @@
 {
   "name": "butter-fly",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
