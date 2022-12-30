@@ -1,6 +1,6 @@
 {
   "name": "@butter-fly/button-tsx",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "author": "",
   "homepage": "",
@@ -18,7 +18,7 @@
     "vue": ">=3.2.0"
   },
   "dependencies": {
-    "@butter-fly/utils": "1.0.4"
+    "@butter-fly/utils": "1.0.5"
   },
   "gitHead": "175e66e9e8ed2c9f7fd63278cb7693a770a93de0"
 }
