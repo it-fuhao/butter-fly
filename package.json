@@ -4,6 +4,7 @@
   "workspaces": [
     "packages/*"
   ],
+  "type": "module",
   "scripts": {
     "dev": "vite --host",
     "build:site": "vite build",
@@ -50,15 +51,5 @@
     "vite-plugin-style-import": "1.4.1",
     "vue-tsc": "^0.29.8",
     "yorkie": "^2.0.0"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write",
-      "git add ."
-    ]
   }
 }

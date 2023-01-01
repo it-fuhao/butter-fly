@@ -1,4 +1,4 @@
-import { withInstall } from '@butter-fly/utils';
+import { withInstall } from '../utils/vue/index'
 import _BFButtonTsx from './src/index';
 
 export const BFButtonTsx = withInstall(_BFButtonTsx);

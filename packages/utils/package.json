@@ -15,7 +15,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "files": [
-    "lib"
+    "lib",
+    "dist",
+    "vue"
   ],
   "scripts": {
     "build": "node ../../command/build.js package=utils"
