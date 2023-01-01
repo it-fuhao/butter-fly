@@ -1,6 +1,7 @@
 {
   "name": "butter-fly",
   "private": true,
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
@@ -11,7 +12,7 @@
     "preview:site": "vite build && vite preview --host",
     "create": "node ./command/create.js",
     "build:packages": "lerna run build",
-    "publish": "lerna publish",
+    "publyish": "lerna publish",
     "lint": "eslint {**/**/*.{js,vue,ts,tsx},index.html} --fix"
   },
   "dependencies": {

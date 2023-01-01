@@ -1,6 +1,6 @@
 {
   "name": "@butter-fly/button",
-  "version": "1.0.4",
+  "version": "2.0.1",
   "description": "",
   "author": "",
   "homepage": "",
@@ -18,7 +18,7 @@
     "vue": ">=3.2.0"
   },
   "dependencies": {
-    "@butter-fly/utils": "1.0.3"
+    "@butter-fly/utils": "1.0.4"
   },
   "gitHead": "2df7a26dea3ba2642d462fb8168c879eb0c479b3"
 }
